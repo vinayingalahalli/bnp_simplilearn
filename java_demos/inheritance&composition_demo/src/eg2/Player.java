@@ -2,25 +2,18 @@ package eg2;
 
 public class Player extends Person {
 
-	private String teamName;
+	// private String teamName;
 	private int ranking;
-	
+	private Team team;
+
 	public Player() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Player(int id, String name, String teamName, int ranking) {
+	public Player(int id, String name, int ranking, Team team) {
 		super(id, name);
-		this.teamName = teamName;
 		this.ranking = ranking;
-	}
-
-	public String getTeamName() {
-		return teamName;
-	}
-
-	public void setTeamName(String teamName) {
-		this.teamName = teamName;
+		this.team = team;
 	}
 
 	public int getRanking() {
@@ -31,12 +24,21 @@ public class Player extends Person {
 		this.ranking = ranking;
 	}
 
-	
+	public Team getTeam() {
+		return team;
+	}
+
+	public void setTeam(Team team) {
+		this.team = team;
+	}
+
 	public void printPlayer() {
 		System.out.println("Printing Player Details");
 		printPerson();
-		System.out.println("TeamName = "+teamName);
-		System.out.println("Ranking = "+ranking);
+		System.out.println("Ranking = " + ranking);
+		// System.out.println("TeamName = "+teamName);
+		team.printTeam();
+
 	}
-	
+
 }
