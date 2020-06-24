@@ -283,7 +283,7 @@ x++; // will throw me an error as final variables are non modifiable.
 
 5)Abstraction
 -----------------------------
-abstarct data refers to that data whose implementation details
+abstract data refers to that data whose implementation details
 are hidden.
 the customer or end user is never intrested in how the features are
 implemented, he will be intrested in weather the feature is given to him
@@ -299,7 +299,7 @@ second way -> by creating interfaces (pure form of abstraction)
 * a class is said to be an abstract class if it is having at least one
 abstract method.
 what is abstract method? -> abstract method is a method for which the
-implmentation or body of method wont be there.
+implementation or body of method wont be there.
 where is the implemenation of abstract method? -> the abstract method
 is implemented or defined in the child class or the class which is 
 extending it.
@@ -325,16 +325,19 @@ you dont have to use abstract keyword to the method at all.
 * all the methods in interface are by default abstract as well as public.
 * if you declare any variable within a interface then that variable is
 considered to be as a final variable.
-*a class can be extended only once but an interface can be implemented
-any number of times.
+*a class can  extend only one class but a class can implement 
+any number of interfaces.
 * apart from this it gets all the properties like it can have inner interface,
 anonymous interface, and you can also extend a interface by other interface.
 * use implements keyword to implement any interface.
 there are types of interfaces
 1)Normal Interface -> interface with many abstract methods in it.
-2)Functional Interface -> Interface with only and only one abstract method.
+			Collection,List,Queue
+2)Functional Interface(SAM interface) -> Interface with only and only one abstract method.
+			Comparable,Comparator,Runnable
 3)Marker Interface -> Interface with no abstract methods at all, which
 		is used for compiler to mark that it does some job.
+			Serializable, Clonable
 
 
 Wrapper Classes
