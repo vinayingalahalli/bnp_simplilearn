@@ -467,7 +467,7 @@ Collection F/w
 - List, Set and Map are widely used collections even in advanced f/ws like
 hibernate and spring you get to see lot on these things.
 7)all the collections are part of java.util package
-8)we get to see a utility class called as java.util.Collections in which
+8)we get to see a utility helper class called as java.util.Collections in which
 you can find sort, search and many other functions which can be applied
 on a Collection.
 
@@ -493,7 +493,7 @@ Vector<E> class
 *Gets all props of List.
 * it is thread safe class.
 *by default 10 memory locations once it is filled it will give 10 more
-aand goes on.
+and goes on.
 *Contiguous
 
 LinkedList<E> class
@@ -537,6 +537,8 @@ in sorted order
 *Its faster than other Set's since its maintaing the data in sorted.
 *not thread safe
 
+Check out this link for internal implementation of hashing and memory allocation.
+https://www.youtube.com/watch?v=c3RVW3KGIIE&t=24s
 
 Map<K,V> interface
 ----------------------------
