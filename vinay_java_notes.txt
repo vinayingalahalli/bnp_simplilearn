@@ -631,7 +631,7 @@ b)deamon/background thread - these threads run in a background of our app mostly
 *in java, threads can be implemented in 2 ways
 a)by extending java.lang.Thread class - where you have all the thread life 
                                         cycle based methods.
-b)by implementing java.lang.Runnable interface(preffered) - where you have only
+b)by implementing java.lang.Runnable functional interface(preffered) - where you have only
 					run() method in which you will give the
 					job of thread.
 * the threads default behaviour of being in a race condition wont be helpful
