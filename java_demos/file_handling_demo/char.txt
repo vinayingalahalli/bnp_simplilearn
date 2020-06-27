@@ -1,0 +1,5 @@
+hello from char stream
+This line will  be in new line
+You dont have to covert when doing char streamhello from char stream
+This line will  be in new line
+You dont have to covert when doing char stream
