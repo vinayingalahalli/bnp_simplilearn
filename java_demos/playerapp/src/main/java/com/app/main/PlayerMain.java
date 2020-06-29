@@ -29,16 +29,28 @@ public class PlayerMain {
 			switch (ch) {
 			case 1:
 				System.out.println("Enter Player details");
+				System.out.println("Enter Player Id");
+				int id=Integer.parseInt(scanner.nextLine());
 				System.out.println("Enter player name");
 				String name = scanner.nextLine();
 				System.out.println("Enter player teamName");
 				String teamName = scanner.nextLine();
-				Player player = new Player(name, teamName);
-				player = playerBO.createPlayer(player);
-				if (player != null && player.getId() != 0) {
-					System.out.println("Player created with below details");
-					System.out.println(player);
+				System.out.println("Enter player age");
+				int age=Integer.parseInt(scanner.nextLine());
+				System.out.println("Enter Player Gender(m/f/o)");
+				String gender=scanner.nextLine();
+				Player player=new Player(id, name, teamName, age, gender);
+				
+				try {
+					player = playerBO.createPlayer(player);
+					if (player != null && player.getId() != 0) {
+						System.out.println("Player created with below details");
+						System.out.println(player);
+					}
+				} catch (BusinessException e1) {
+					System.out.println(e1.getMessage());
 				}
+				
 				break;
 			case 2:
 				System.out.println("Under construction please try other option");
@@ -46,11 +58,11 @@ public class PlayerMain {
 				break;
 			case 3:
 				System.out.println("Enter player id for player details");
-				int id = Integer.parseInt(scanner.nextLine());
+				int id1 = Integer.parseInt(scanner.nextLine());
 				try {
-					Player p = playerBO.getPlayerById(id);
+					Player p = playerBO.getPlayerById(id1);
 					if (p != null) {
-						System.out.println("Player with id " + id + " found with details ");
+						System.out.println("Player with id " + id1 + " found with details ");
 						System.out.println(p);
 					}
 				} catch (BusinessException e) {
@@ -59,14 +71,17 @@ public class PlayerMain {
 
 				break;
 			case 4:
-				List<Player> playerList = playerBO.getAllPlayers();
-				if (playerList != null && playerList.size() > 0) {
-					System.out.println("Total there are " + playerList.size() + " no of players.. Details are");
-					for (Player p1 : playerList) {
-						System.out.println(p1);
-					}
-				} else {
-					System.out.println("No Players are in system as of now.....");
+				List<Player> playerList;
+				try {
+					playerList = playerBO.getAllPlayers();
+					if (playerList != null && playerList.size() > 0) {
+						System.out.println("Total there are " + playerList.size() + " no of players.. Details are");
+						for (Player p1 : playerList) {
+							System.out.println(p1);
+						}
+					} 
+				} catch (BusinessException e) {
+					System.out.println(e);
 				}
 				break;
 			case 5:

@@ -1,12 +1,11 @@
-package com.app.bo;
+package com.app.dao;
 
 import java.util.List;
 
 import com.app.exception.BusinessException;
 import com.app.model.Player;
 
-public interface PlayerBO {
-
+public interface PlayerDAO {
 	public Player createPlayer(Player player)throws BusinessException;
 	public Player getPlayerById(int id) throws BusinessException;
 	public void removePlayerById(int id)throws BusinessException;
