@@ -14,4 +14,5 @@ public interface PlayerDAO {
 	public List<Player> getPlayersByTeamName(String teamname) throws BusinessException;
 	public List<Player> getPlayersByAge(int age) throws BusinessException;
 	public List<Player> getPlayersByGender(String gender)throws BusinessException;
+	public List<Player> getPlayersByAgeRange(int upper,int lower)throws BusinessException;
 }

@@ -22,7 +22,8 @@ public class PlayerMain {
 			System.out.println("2)Remove Player");
 			System.out.println("3)Search Player By id");
 			System.out.println("4)Get All Players");
-			System.out.println("5)EXIT");
+			System.out.println("5)Search Players By Gender");
+			System.out.println("6)EXIT");
 			System.out.println("Enter your choice");
 			ch = Integer.parseInt(scanner.nextLine());
 
@@ -30,17 +31,17 @@ public class PlayerMain {
 			case 1:
 				System.out.println("Enter Player details");
 				System.out.println("Enter Player Id");
-				int id=Integer.parseInt(scanner.nextLine());
+				int id = Integer.parseInt(scanner.nextLine());
 				System.out.println("Enter player name");
 				String name = scanner.nextLine();
 				System.out.println("Enter player teamName");
 				String teamName = scanner.nextLine();
 				System.out.println("Enter player age");
-				int age=Integer.parseInt(scanner.nextLine());
+				int age = Integer.parseInt(scanner.nextLine());
 				System.out.println("Enter Player Gender(m/f/o)");
-				String gender=scanner.nextLine();
-				Player player=new Player(id, name, teamName, age, gender);
-				
+				String gender = scanner.nextLine();
+				Player player = new Player(id, name, teamName, age, gender);
+
 				try {
 					player = playerBO.createPlayer(player);
 					if (player != null && player.getId() != 0) {
@@ -50,7 +51,7 @@ public class PlayerMain {
 				} catch (BusinessException e1) {
 					System.out.println(e1.getMessage());
 				}
-				
+
 				break;
 			case 2:
 				System.out.println("Under construction please try other option");
@@ -71,20 +72,36 @@ public class PlayerMain {
 
 				break;
 			case 4:
-				List<Player> playerList;
 				try {
-					playerList = playerBO.getAllPlayers();
+					List<Player> playerList = playerBO.getAllPlayers();
 					if (playerList != null && playerList.size() > 0) {
 						System.out.println("Total there are " + playerList.size() + " no of players.. Details are");
 						for (Player p1 : playerList) {
 							System.out.println(p1);
 						}
-					} 
+					}
 				} catch (BusinessException e) {
-					System.out.println(e);
+					System.out.println(e.getMessage());
 				}
 				break;
+
 			case 5:
+				System.out.println("Enter gender(m/f/o) to get the players list");
+				String gender1=scanner.nextLine();
+				try {
+					List<Player> playerList = playerBO.getPlayersByGender(gender1);
+					if (playerList != null && playerList.size() > 0) {
+						System.out.println("Total there are " + playerList.size() + " no of players..with gender "+gender1+" Details are");
+						for (Player p1 : playerList) {
+							System.out.println(p1);
+						}
+					}
+				} catch (BusinessException e) {
+					System.out.println(e.getMessage());
+				}
+				break;
+
+			case 6:
 				System.out.println("Thank you for using our app");
 
 				break;
@@ -93,7 +110,7 @@ public class PlayerMain {
 				System.out.println("Invalid option Try again");
 				break;
 			}
-		} while (ch != 5);
+		} while (ch != 6);
 	}
 
 }
