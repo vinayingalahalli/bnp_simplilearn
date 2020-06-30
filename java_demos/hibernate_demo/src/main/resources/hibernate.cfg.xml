@@ -15,6 +15,6 @@
         <property name="hbm2ddl.auto">update</property>
         
         <mapping class="com.demo.model.Trainee"/>
-       
+       <mapping class="com.demo.model.Address"/>
     </session-factory>
 </hibernate-configuration>
