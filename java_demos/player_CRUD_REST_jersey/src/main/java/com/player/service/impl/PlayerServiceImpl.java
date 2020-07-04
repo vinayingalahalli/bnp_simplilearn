@@ -37,4 +37,19 @@ private PlayerDAO playerDAO=new PlayerDAOImpl();
 		return playerDAO.getAllPlayers();
 	}
 
+	public List<Player> getPlayersByName(String name) throws BusinessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Player> getPlayersByTeamName(String teamName) throws BusinessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Player> getPlayersByAgeRange(int upper, int lower) throws BusinessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
