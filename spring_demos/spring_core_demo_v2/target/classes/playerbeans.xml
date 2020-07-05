@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="t1" class="com.demo.model.Team">
+		<property name="tid" value="9000"></property>
+		<property name="teamName" value="INDIA"></property>
+	</bean>
+	<bean id="t2" class="com.demo.model.Team">
+		<property name="tid" value="9001"></property>
+		<property name="teamName" value="WINDIES"></property>
+	</bean>
+
+	<bean id="a1" class="com.demo.model.Address">
+		<property name="aid" value="5000"></property>
+		<property name="addressDetails"
+			value="Some Address1 Some Street1"></property>
+	</bean>
+	<bean id="a2" class="com.demo.model.Address">
+		<property name="aid" value="5001"></property>
+		<property name="addressDetails"
+			value="Some Address2 Some Street2"></property>
+	</bean>
+	<bean id="a3" class="com.demo.model.Address">
+		<property name="aid" value="5002"></property>
+		<property name="addressDetails"
+			value="Some Address3 Some Street3"></property>
+	</bean>
+	<bean id="a4" class="com.demo.model.Address">
+		<property name="aid" value="5003"></property>
+		<property name="addressDetails"
+			value="Some Address4 Some Street4"></property>
+	</bean>
+
+
+	<bean id="p1" class="com.demo.model.Player">
+		<property name="id" value="100"></property>
+		<property name="name" value="Sachin R T"></property>
+		<property name="city" value="Mumbai"></property>
+		<property name="team" ref="t1"></property>
+		<property name="addressList">
+		<list>
+		<ref bean="a1"/>
+		<ref bean="a2"/>
+		</list>
+		</property>
+	</bean>
+
+	<bean id="p2" class="com.demo.model.Player">
+		<constructor-arg name="id" value="101"></constructor-arg>
+		<constructor-arg name="name" value="Virat Kohli"></constructor-arg>
+		<constructor-arg name="city" value="Delhi"></constructor-arg>
+		<property name="team" ref="t1"></property>
+		<property name="addressList">
+		<list>
+		<ref bean="a3"/>
+		</list>
+		</property>
+	</bean>
+	<bean id="p3" class="com.demo.model.Player">
+		<property name="id" value="102"></property>
+		<property name="name" value="Chris Gayle"></property>
+		<property name="city" value="Jamica"></property>
+		<property name="team" ref="t2"></property>
+		<property name="addressList">
+		<list>
+		<ref bean="a4"/>
+		</list>
+		</property>
+	</bean>
+
+</beans>
