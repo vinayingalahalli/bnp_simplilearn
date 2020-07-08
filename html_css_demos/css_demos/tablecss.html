@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Css Demo</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        th{
+            height: 50px;
+            background-color: darkgreen;
+            color: white;
+        }
+        td{
+            height: 50px;
+            vertical-align: bottom;
+        }
+        th,td{
+            padding: 15px;
+        }
+        tr:hover{
+            background-color: blue;
+        }
+        tr:nth-child(even){
+            background-color: crimson;
+        }
+        div{
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <table >
+        <caption>demo table</caption>
+        <tr >
+            <th>Heading1</th>
+            <th>Heading2</th>
+            <th>Heading3</th>
+            <th>Heading4</th>
+        </tr>
+
+        <tr>
+            <td>data1</td>
+            <td>data2</td>
+            <td>data3</td>
+            <td>data4</td>
+        </tr>
+        <tr>
+            <td>data5</td>
+            <td>data6</td>
+            <td>datas7</td>
+            <td>data8</td>
+        </tr>
+        <tr>
+            <td>data9</td>
+            <td>data10</td>
+            <td>datas11</td>
+            <td>data12</td>
+        </tr>
+        <tr>
+            <td>data13</td>
+            <td>data14</td>
+            <td>datas15</td>
+            <td>data16</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Demo</title>
+    <style>
+        a {
+            font-size: xx-large;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: deeppink;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: darkred;
+        }
+
+        #links a:link {
+            background-color: gold;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.google.com/">Google</a>
+    <br />
+    <a href="">Google Again</a><br />
+    <br />
+    <h1>Link as a Button</h1>
+    <div id="links">
+        <a href="">My Button</a>
+    </div>
+</body>
+
+</html>
