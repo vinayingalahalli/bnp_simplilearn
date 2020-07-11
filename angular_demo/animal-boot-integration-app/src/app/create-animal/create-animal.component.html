@@ -1,0 +1,17 @@
+<div>
+<h3><u>Add Animal</u></h3>
+<table border="1px">
+<tr>
+    <td><input type="text" placeholder="Enter Animal Name" [(ngModel)]="animal.name"></td>
+</tr>
+<tr>
+    <td><input type="number" placeholder="Enter Animal Age" [(ngModel)]="animal.age"></td>
+</tr>
+<tr>
+    <td><input type="text" placeholder="Enter Animal Category" [(ngModel)]="animal.category"></td>
+</tr>
+<tr>
+    <td><button (click)="addAnimal()">Add Animal</button></td>
+</tr>
+</table>
+</div>

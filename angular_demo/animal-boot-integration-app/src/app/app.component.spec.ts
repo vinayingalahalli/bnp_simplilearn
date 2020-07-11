@@ -1,18 +1,16 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
-import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        HelloComponent
-      ],
       imports: [
-        FormsModule
-      ]
+        RouterTestingModule
+      ],
+      declarations: [
+        AppComponent
+      ],
     }).compileComponents();
   }));
 
@@ -22,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Hello My Title Now'`, () => {
+  it(`should have as title 'animal-boot-integration-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Hello My Title Now');
+    expect(app.title).toEqual('animal-boot-integration-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('span').textContent).toContain('Hello My Title Now app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('animal-boot-integration-app app is running!');
   });
 });

@@ -1,24 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HelloComponent } from './hello.component';
-import { FormsModule } from '@angular/forms';
+import { DeleteAnimalComponent } from './delete-animal.component';
 
-describe('HelloComponent', () => {
-  let component: HelloComponent;
-  let fixture: ComponentFixture<HelloComponent>;
+describe('DeleteAnimalComponent', () => {
+  let component: DeleteAnimalComponent;
+  let fixture: ComponentFixture<DeleteAnimalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HelloComponent ],
-      imports: [
-        FormsModule
-      ]
+      declarations: [ DeleteAnimalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HelloComponent);
+    fixture = TestBed.createComponent(DeleteAnimalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
