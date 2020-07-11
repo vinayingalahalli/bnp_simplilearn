@@ -8,6 +8,7 @@ import { Player } from '../player';
 })
 export class HelloComponent implements OnInit {
 
+  idModel:number;
   players:Player[]=[];
   //  p1:Player={
   //   id:100,
@@ -38,6 +39,12 @@ export class HelloComponent implements OnInit {
 
    removeLastPlayer(){
      this.players.pop();
+   }
+
+   removePlayer()
+   {
+    let index=this.players.findIndex(i=>i.id===this.idModel);
+    this.players.splice(index,1);
    }
   ngOnInit() {
   }

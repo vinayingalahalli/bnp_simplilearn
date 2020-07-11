@@ -1,0 +1,17 @@
+<div>
+  <h1>Demo on title= {{title}} </h1>
+  <h1>uppercase {{title | uppercase}}</h1>
+  <h1>lowercase {{title | lowercase}}</h1>
+  <h3>Currency Pipe {{65893.33 |currency:"INR"}}</h3>
+  <h3>Normal date ->  {{mydate}}</h3>
+  <h3>Date PIPE   {{mydate |date:'d/MMMM/y E HH hh:mm:ss'}}</h3>
+  <h3>Json obj {{jsonVal}}</h3>
+  <h3>Json obj with JSON PIPE {{jsonVal|json}}</h3>
+  <h3>Percentage Pipe {{00.54565|percent}}</h3>
+  <h3>Slice Pipe     {{fruits | slice:2:4}}</h3>
+
+  <h2>Custom Pipe Demo -1</h2>
+  <h3>Custom Sqrt pipe {{169 | sqrt}}</h3>
+  <h2>Custom Pipe Demo -2</h2>
+  <h3>Custom Full Name Pipe   ->     {{firstName | fullname:lastName}}</h3>
+</div>

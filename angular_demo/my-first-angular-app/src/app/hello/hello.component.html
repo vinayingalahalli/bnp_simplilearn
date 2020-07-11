@@ -17,7 +17,12 @@
             <td><img heigh="100px" width="100px" [src]="player.avatar"></td>
         </tr>
     </table>
+    <br/>
+    <br/>
     <button (click)="removeLastPlayer()">Remove Last Player</button>
+    <br/>
+    Enter Player Id to remove it<input type="text" [(ngModel)]="idModel"/>
+    <button (click)="removePlayer()">RemovePlayerById</button>
 </div>
 
 <div style="float: right; margin-top: -90px; text-align: center;">
